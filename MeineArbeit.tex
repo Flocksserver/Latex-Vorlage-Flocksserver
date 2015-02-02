@@ -1,0 +1,57 @@
+% ######################################
+% ######### Masterdatei ################
+% ######################################
+
+\include{documentDefinition} %Pakete und Definitionen
+
+\begin{document}
+
+% Definition Kopf und Fußzeile
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RE,OL]{{\nouppercase{\leftmark}}}
+\fancyfoot[LE,OR]{\thepage}
+
+% Vor dem Inhalt
+\pagestyle{empty}
+\frontmatter 
+\include{titlePage}
+
+\include{quellcodeDefinition}
+\pagestyle{empty}
+\include{danksagung}
+\include{abstract}
+
+\pagestyle{empty}
+\tableofcontents
+
+% Inhalt
+\pagestyle{fancy}
+\mainmatter
+\input{kapitel1}
+\input{kapitel2}
+
+% Verzeichnisse
+\newpage
+\pagestyle{empty}
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+% Literatur
+\newpage
+\bibliographystyle{alphadin}
+\bibliography{meinebib}
+
+% Nach dem Inhalt
+\pagestyle{plain}
+\clearpage
+\appendix
+\pagenumbering{Roman}
+\backmatter
+\include{anhang}
+\include{erklaerung}
+
+
+\end{document}
