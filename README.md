@@ -1,2 +1,2 @@
 # Latex-Vorlage-Flocksserver
-Dies ist die eigens erstellte Vorlage für eine Bachelorarbeit
+Dies ist die eigens erstellte Vorlage für eine Hausarbeit/Ausarbeitung/Bachelorarbeit usw. 
